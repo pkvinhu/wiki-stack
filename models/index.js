@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize('postgres://localhost:5432/wikistack');
+const db = new Sequelize('postgres://localhost:5432/wikistack', { logging: false });
 
 const slugify = (title) => {
   return title.replace(/\s+/g, '_').replace(/\W/g, '');
@@ -42,6 +42,8 @@ const User = db.define('user', {
     }
   }
 });
+
+Page.belongsTo(User, { as: 'author' });
 
 module.exports = {
 	db,
