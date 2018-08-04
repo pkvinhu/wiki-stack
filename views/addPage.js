@@ -11,7 +11,7 @@ module.exports = () => layout(html`
         <input id="name" name="name" type="text" class="form-control"/>
       </div>
     
-<label for="author-email" class="col-sm-2 control-label">Author Email</label>
+    <label for="author-email" class="col-sm-2 control-label">Author Email</label>
       <div class="col-sm-10">
         <input id="email" name="email" type="text" class="form-control"/>
       </div>
@@ -31,6 +31,11 @@ module.exports = () => layout(html`
     <div>
       <label for="status" class="col-sm-2 control-label">Page Status</label>
       <input id="status" name="status" type="text" class="form-control"/>
+    </div>
+
+    <div>
+      <label for="tags" class="col-sm-2 control-label">Tags</label>
+      <input id="tags" name="tags" type="text" class="form-control"/>
     </div>
 
     <div class="col-sm-offset-2 col-sm-10">
